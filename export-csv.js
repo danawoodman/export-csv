@@ -31,7 +31,7 @@
         i = 0;
         each(this.series, function (series) {
             if (series.options.includeInCSVExport !== false) {
-                names.push(series.name);
+                names.push('"' + series.name + '"');
                 each(series.points, function (point) {
                     if (!rows[point.x]) {
                         rows[point.x] = [];
